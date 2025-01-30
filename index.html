@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Kopi Kumat – Tempat Cerita Berlabuh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: 'Arial', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Kedai Kopi Kumat</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-yellow-400">Beranda</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Cerpen Gratis</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Cerpen Premium</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="text-center py-6 bg-gray-700 shadow-lg">
+        <h1 class="text-3xl font-bold">Kedai Kopi Kumat – Tempat Cerita Berlabuh</h1>
+        <p class="mt-2 text-gray-300">Nikmati aroma cerita yang hangat di Kedai Kopi Kumat. Kumpulan cerpen pilihan, dari yang gratis hingga eksklusif berbayar, siap menemani harimu. Duduklah, seruput kisah, dan biarkan imajinasi mengalir.</p>
+    </header>
+
+    <main class="p-6 container mx-auto">
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold">Cerpen Gratis</h2>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="text-blue-400 hover:underline">Cerpen 1</a></li>
+                <li><a href="#" class="text-blue-400 hover:underline">Cerpen 2</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold">Cerpen Premium</h2>
+            <p class="mt-2">Masukkan kode akses untuk membaca cerpen premium.</p>
+            <input type="text" id="kodeAkses" class="mt-2 p-2 text-black" placeholder="Masukkan kode...">
+            <button onclick="cekKode()" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+            <p id="hasil" class="mt-4 text-red-500"></p>
+        </section>
+    </main>
+
+    <script>
+        function cekKode() {
+            const kodeBenar = "CERPEN123";
+            let kode = document.getElementById("kodeAkses").value;
+            if (kode === kodeBenar) {
+                document.getElementById("hasil").innerHTML = "<span class='text-green-500'>Kode benar! <a href='#' class='text-blue-400'>Baca cerpen premium</a></span>";
+            } else {
+                document.getElementById("hasil").innerText = "Kode salah, coba lagi.";
+            }
+        }
+    </script>
+</body>
+</html>
