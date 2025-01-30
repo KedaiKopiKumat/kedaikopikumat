@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 - Open Mic Maut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white p-6">
+    <h1 class="text-3xl font-bold">Chapter 1 - Open Mic Maut</h1>
+    <p class="mt-4 text-gray-300">
+        Ini adalah isi chapter pertama dari Open Mic Maut. Tulis cerita Anda di sini...
+    </p>
+    
+    <label for="lanjutkan" class="mt-6 block text-lg">Ketik <strong>"LANJUTKAN CERITANYA"</strong> untuk lanjut:</label>
+    <input type="text" id="lanjutkan" class="text-black p-2 rounded" placeholder="Ketik di sini...">
+    <button onclick="cekInput()" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+
+    <p id="hasil" class="mt-4"></p>
+
+    <a href="../../index.html" class="text-yellow-400 hover:underline block mt-6">⬅ Kembali ke HOME</a>
+
+    <script>
+        function cekInput() {
+            let input = document.getElementById("lanjutkan").value.toUpperCase();
+            if (input === "LANJUTKAN CERITANYA") {
+                window.location.href = "chapter3.html"; // Ganti ke chapter berikutnya
+            } else {
+                document.getElementById("hasil").innerText = "Jawaban salah! Ketik sesuai instruksi.";
+            }
+        }
+    </script>
+</body>
+</html>
